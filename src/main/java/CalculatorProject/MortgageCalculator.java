@@ -12,17 +12,31 @@ public class MortgageCalculator {
         Scanner myScanner = new Scanner(System.in);
 
         System.out.println("What is your principal?");
-        float principalAns = myScanner.nextFloat();
+        double principalAns = myScanner.nextDouble();
 
-        System.out.println("Okay, now what is your interest rate in months?");
-        float intRate = myScanner.nextFloat();
+        System.out.println("Okay, now what is your interest rate" +
+                "?");
+        double intRate = myScanner.nextDouble();
 
-        System.out.println("Finally, how long will this loan last for?");
-        float months = myScanner.nextFloat();
+        System.out.println("Finally, how long will this loan last for in months?");
+        double months = myScanner.nextDouble();
 
 //        float principal = principalAns;
 //        float rateOfInt = intRate;
 //        float time = months;
+
+        // principalAns * intRate
+
+        double sumOne = 1 + (intRate / 12);
+        double sumTwo = Math.pow(sumOne, months);
+        double sumThree = sumTwo - 1;
+        double sumFour = sumTwo / sumThree;
+        double sumFive = (intRate / 12) * sumFour;
+        double sumSix = principalAns * sumFive;
+        double sumSeven = sumSix * 180;
+
+        System.out.println("Your monthly payment should be " + sumSix);
+        System.out.println(" and your total interest is " + (sumSeven - principalAns));
 
 
     }
@@ -58,3 +72,7 @@ public class MortgageCalculator {
 //                int sum = numberOne + numberTwo;
 //
 //                System.out.printf("The sum is: %d", sum);
+/////////////////////////////////
+//double sum = Math.pow(2, 3);
+//
+//        System.out.println(sum);
