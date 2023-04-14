@@ -35,8 +35,8 @@ public class MortgageCalculator {
         double sumSix = principalAns * sumFive;
         double sumSeven = sumSix * 180;
 
-        System.out.println("Your monthly payment should be " + sumSix);
-        System.out.println(" and your total interest is " + (sumSeven - principalAns));
+        System.out.println("Your monthly payment should be " + String.format("%.2f", sumSix));
+        System.out.println(" and your total interest is " + String.format("%.2f", sumSeven - principalAns));
 
 
     }
@@ -76,3 +76,10 @@ public class MortgageCalculator {
 //double sum = Math.pow(2, 3);
 //
 //        System.out.println(sum);
+//////////////////////////////////////////
+//float subtotal = 22.87f;
+//    float tax = subtotal * 0.0825f;
+//    float totalDue = subtotal + tax;
+//        System.out.println(
+//                "Total due is: " + String.format("%.2f", totalDue));
+//                System.out.printf("Total due is: %.2f ", totalDue);
