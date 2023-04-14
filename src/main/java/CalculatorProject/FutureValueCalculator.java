@@ -11,7 +11,7 @@ public class FutureValueCalculator {
         double sumOne = Math.pow(rateOfInterest, (365 * 5));
         double sumTwo = principal * sumOne;
 
-        System.out.printf("The ending amount would be $%.2f" , sumTwo);
+        System.out.printf("The ending amount would be $%.2f." , sumTwo);
         System.out.printf(" You would receive $%.2f in interest." , (sumTwo - principal));
     }
 }
