@@ -35,8 +35,8 @@ public class MortgageCalculator {
         double sumSix = principalAns * sumFive;
         double sumSeven = sumSix * 180;
 
-        System.out.println("Your monthly payment should be " + String.format("%.2f", sumSix));
-        System.out.println(" and your total interest is " + String.format("%.2f", sumSeven - principalAns));
+        System.out.println("Your monthly payment should be $" + String.format("%.2f", sumSix));
+        System.out.println(" and your total interest is $" + String.format("%.2f", sumSeven - principalAns));
 
 
     }
